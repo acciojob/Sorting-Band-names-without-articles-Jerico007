@@ -16,15 +16,6 @@ const bands = [
     "An Old Dog"
 ];
 
-/**
- * 我們希望排序的時候能略過一些關鍵字
- **/
-function strip (word) {
-    let regex = new RegExp('^(a |the |an )', 'i')
-    return word.replace(regex, '').trim()
-}
-
-const sortedBands = bands.sort((a, b) => (strip(a) > strip(b)) ? 1 : -1)
 
 
 /** 
