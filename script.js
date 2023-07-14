@@ -17,8 +17,12 @@ const bands = [
 ];
 
 
+ //Map will give the modified array of articles
  let sortedBands = bands.map((val) => {
+	 //Split the current val map array
+	 // "An Old Dog" => ['An','Old','Dog']
 	let currentVal = val.split(" ");
+	 // Use array reduce function to remove ["The","An","A"]
 	let ans = currentVal.reduce((prev, curr) => {
 		if(curr != "A" && curr != "An" && curr != "The")
 		{
@@ -26,6 +30,7 @@ const bands = [
 		}
 		return prev;
 	}, "")
+	 // return the ans string.
 	 return ans;
 })
 
