@@ -17,7 +17,19 @@ const bands = [
 ];
 
 
+ let sortedBands = bands.map((val) => {
+	let currentVal = val.split(" ");
+	let ans = currentVal.reduce((prev, curr) => {
+		if(curr != "A" && curr != "An" && curr != "The")
+		{
+			return prev + " " + curr;
+		}
+		return prev;
+	}, "")
+	 return ans;
+})
 
+sortedBands.sort();
 /** 
  * add ul list in HTML
  **/
